@@ -1,17 +1,50 @@
-#buttons {
+body {
+  background: url('https://images.unsplash.com/photo-1516658273235-6f3ff3b414d1?ixlib=rb-0.3.5&s=2d58a635a00628f1696f454fd2f52b29&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+   -moz-background-size: cover;
+   -webkit-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
 
-    /* Positioning */
-    margin: 50px 0;
+h1{
+ text-align: center;
+ color: ivory;
+ margin-top: 30px;
+}
 
-    /* Typography */
-    text-align: center;
 
-  }
+#subwrapper{
+ background-color: rgba(200, 200, 200, 0.7);
+ width: 50%;
+ text-align: center;
+ margin-left: 25%;
+ margin-top: 50px;
+ padding-bottom: 10px;
+ border: black 2px solid;
+ border-radius: 25px;
+ font-family: sans-serif;
+ padding: 20px;
+}
 
-  button {
+#start{
+  font-size: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
-    /* Box-model */
-    width: 200px;
-    height: 100px;
+button{
+ color: ivory;
+ border: 2px solid black;
+ text-align: center;
+ border-radius: 10px;
+ background-color: black;
+ font-size: 11pt;
+ cursor: pointer;
+ margin: 10px;
+ padding: 10px;
+}
 
-  }
+button:hover{
+ background-color: ivory;
+ color: black;
+}

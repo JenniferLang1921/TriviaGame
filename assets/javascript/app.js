@@ -74,7 +74,7 @@ timeUp: function() {
     clearInterval(timer);
     game.unanswered++;
     $('#subwrapper').html('<h2>OUT OF TIME!</H2>');
-    $('#subwrapper').append('<h3>The Correct Answer Was: ' +questions[game.currentQuestion].correctAnswer+ '</h3>');
+    $('#subwrapper').append('<h3>The Correct Answer Is: ' +questions[game.currentQuestion].correctAnswer+ '</h3>');
     if(game.currentQuestion==questions.length-1){
     setTimeout(game.results,3*1000);
     } else {
@@ -117,7 +117,7 @@ answeredIncorrectly: function() {
     clearInterval(timer);
     game.incorrect++;
     $('#subwrapper').html('<h2>YOU GOT IT WRONG!</h2>');
-    $('#subwrapper').append('<h3>The Correct Answer Was: ' +questions[game.currentQuestion].correctAnswer+ '</h3>');
+    $('#subwrapper').append('<h3>The Correct Answer Is: ' +questions[game.currentQuestion].correctAnswer+ '</h3>');
     if(game.currentQuestion==questions.length-1){
     setTimeout(game.results,3*1000);
     } else {
@@ -126,7 +126,7 @@ answeredIncorrectly: function() {
 },
 reset: function() {
   game.currentQuestion = 0;
-  game.counter = 0;
+  game.counter = 30;
   game.correct = 0;
   game.incorrect = 0;
   game.unanswered = 0;

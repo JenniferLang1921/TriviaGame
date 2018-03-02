@@ -21,7 +21,7 @@ image: "assets/images/icecream.gif"
 question: "What is America's favorite drink?",
 answers: ["Soda", "Water", "Coffee", "Juice"],
 correctAnswer: "Water",
-image: "assets/images/image.gif"
+image: "assets/images/water.gif"
 }, {
 question: "What is America's favorite meal?",
 answers: ["Pizza", "Waffles", "Steak", "Chicken"],
@@ -66,6 +66,7 @@ loadQuestion: function(){
 nextQuestion: function() {
     game.counter = 30;
     $('#counter').html(game.counter);
+    $("#image").html("");
     game.currentQuestion++;
     game.loadQuestion();
 
@@ -75,6 +76,7 @@ timeUp: function() {
     game.unanswered++;
     $('#subwrapper').html('<h2>OUT OF TIME!</H2>');
     $('#subwrapper').append('<h3>The Correct Answer Is: ' +questions[game.currentQuestion].correctAnswer+ '</h3>');
+    $('#image').html("<img src='" + questions[game.currentQuestion].image + "'/>");
     if(game.currentQuestion==questions.length-1){
     setTimeout(game.results,3*1000);
     } else {
@@ -90,6 +92,7 @@ results: function() {
     $('#subwrapper').append("<h3>Incorrect: "+game.incorrect +"</h3>");
     $('#subwrapper').append("<h3>Unanswered: "+game.unanswered+"</h3>");
     $('#subwrapper').append("<button id='reset'>RESET</button>");
+    $("#image").html("");
 
 },
 clicked: function(e) {
@@ -106,6 +109,7 @@ answeredCorrectly: function() {
     clearInterval(timer);
     game.correct++;
     $('#subwrapper').html('<h2>YOU GOT IT RIGHT!</h2>');
+    $('#image').html("<img src='" + questions[game.currentQuestion].image + "'/>");
     if(game.currentQuestion==questions.length-1){
     setTimeout(game.results,3*1000);
     } else {
@@ -118,6 +122,7 @@ answeredIncorrectly: function() {
     game.incorrect++;
     $('#subwrapper').html('<h2>YOU GOT IT WRONG!</h2>');
     $('#subwrapper').append('<h3>The Correct Answer Is: ' +questions[game.currentQuestion].correctAnswer+ '</h3>');
+    $('#image').html("<img src='" + questions[game.currentQuestion].image + "'/>");
     if(game.currentQuestion==questions.length-1){
     setTimeout(game.results,3*1000);
     } else {
@@ -131,5 +136,6 @@ reset: function() {
   game.incorrect = 0;
   game.unanswered = 0;
   game.loadQuestion();
+  $("#image").html("");
 }
 }

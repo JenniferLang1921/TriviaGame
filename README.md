@@ -1,6 +1,9 @@
 #  https://jenniferlang1921.github.io/TriviaGame/
 
-This is a triva game called America's favorite trivia game.  It has questions about America's favorite foods.  The timer will run for 30 seconds while you select your answers, then the correct answers will be shown to you.  
+_America's Favorite Trivia Game_
+*Trivia questions about America's favorite foods
+
+*The timer will run for 30 seconds while you select your answers, then the correct answers will be shown to you.  
 
 *Technologies used: javascript, jquery, css, bootstrap 4, html5 
 

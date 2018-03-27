@@ -4,7 +4,7 @@ _America's Favorite Trivia Game_
 
 * Trivia questions about America's favorite foods
 
-* The timer will run for 30 seconds while you select your answers, then the correct answers will be shown to you.  
+* The timer will run for 30 seconds while you select your answers, then the correct answers will be shown to you with a giphy.  
 
 * Technologies used: javascript, jquery, css, bootstrap 4, html5 
 
